@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Te amo bobona</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    *{
+        font-family: "Inter", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 450;
+        font-style: normal;
+        color: white;
+    }
+    body{
+        background-color:#13a06d ;
+    }
+    #texto{
+        margin-bottom: 0px;
+        text-align: center;
+        color:#5a636e;
+    }
+    #login{
+        background-color: #2d3238;
+        width: 50vw;
+        height: 50vh;
+        border-radius: 3vw;
+        margin: auto;
+        margin-top: 20vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.694);
+    }
+    .pergunta{
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 6vh;
+        width: 40vw;
+        height: 5vh;
+        border-radius: 1vw;
+        border: none;
+        background: #5a636e;
+    }
+    #ativar{
+        width: 20vw;
+        height: 8vh;
+        background:#02c481;
+        border: none;
+        margin: auto;
+        border-radius: 1vw;
+
+    }
+</style>
+<body>
+    <img src="" alt="">
+    <section id="login">
+        <h1 id="texto">coração do jp</h1>
+        <input type="text" id="usuario" class="pergunta">
+        <input type="password" id="senhas" class="pergunta">
+        <input type="button" value="logar" id="ativar" onclick="ativar()">
+    </section>
+</body>
+<script>
+    function ativar(){
+        var senha=document.getElementById('senhas').value
+        var nome=document.getElementById('usuario').value
+        var erros=['sai mogreia','vocês não é ela','nem tente sua mogreia','já mandei vazar','muito feia ela é deiz vezes mais melhor','tinha que ser pirinha vaza parça','toma no cu já teno dona mogreia','já tenho minha varoa']
+        if (nome=='julia.horat@totosa.com' && senha=='10/03/2023'){
+            alert('bem vinda julia horat ao meu coração informe essa senha para mim te dar o premio senha: "me da um beijo?"')
+        }else{
+            var numero=sortar(1,erros.length)
+            alert(erros[numero-1])
+        }
+    }
+    function sortar(min,max){
+        min=Math.ceil(min)
+        max=Math.floor(max)
+        return Math.floor(Math.random()*(max-min+1))+min
+    }
+</script>
+</html>
